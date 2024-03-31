@@ -1,0 +1,13 @@
+@import 'src/styles/styles.scss';
+@import "@/styles/function.scss";
+
+.header {
+  position: relative;
+  top:0;
+  height: pxRem(90);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid $border-color;
+}
