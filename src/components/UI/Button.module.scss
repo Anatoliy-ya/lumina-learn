@@ -1,0 +1,37 @@
+@import 'src/styles/styles.scss';
+@import '@/styles/function.scss';
+
+.button {
+  display: inline-block;
+  border: 1px solid $border-color;
+  border-radius: $unit-quarter;
+  padding: $unit-half;
+  cursor: pointer;
+  background-color: $background;
+  font-size: $unit;
+
+  &.primary {
+    background-color: $primary;
+  }
+
+  &.secondary {
+    background-color: $secondary;
+    color: $background;
+  }
+
+  &.accent {
+    background-color: $accent-color;
+  }
+
+  &.sm {
+    padding: $unit-half;
+  }
+
+  &.md {
+    padding: $unit;
+  }
+
+  &.lg {
+    padding: $unit-and-half;
+  }
+}

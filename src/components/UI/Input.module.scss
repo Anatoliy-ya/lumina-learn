@@ -1,0 +1,54 @@
+@import 'src/styles/styles.scss';
+@import '@/styles/function.scss';
+
+input {
+  border: 0px;
+  height: 100%;
+  width: 100%;
+  font-size: $unit;
+  color: $text-color;
+  background-color: $background;
+  padding: $unit-half;
+
+  &.primary {
+    background-color: $primary;
+  }
+
+  &.secondary {
+    background-color: $secondary;
+    color: $background;
+  }
+
+  &.accent {
+    background-color: $accent-color;
+  }
+
+  &.ssm {
+    padding: $unit-quarter;
+  }
+
+  &.sm {
+    padding: $unit-half;
+  }
+
+  &.md {
+    padding: $unit;
+  }
+
+  &.lg {
+    padding: $unit-and-half;
+  }
+}
+.wrapperInput {
+  border: 2px solid $border-color;
+  border-radius: $unit-quarter;
+  background-color: $background;
+  padding: 0;
+  width: pxRem(200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:focus {
+    outline: 0;
+  }
+}

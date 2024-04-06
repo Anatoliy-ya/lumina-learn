@@ -1,10 +1,13 @@
+import Input from 'components/UI/Input';
 import styles from './App.module.scss';
-import Layout from './components/UI/layout/Layout';
+import Layout from './components/layout/Layout';
 
 function App() {
   return (
     <div className={styles.app}>
-      <Layout>Hello</Layout>
+      <Layout>
+        <Input variant="secondary" size="sm" />
+      </Layout>
     </div>
   );
 }

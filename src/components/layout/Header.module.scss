@@ -1,13 +1,17 @@
 @import 'src/styles/styles.scss';
-@import "@/styles/function.scss";
+@import '@/styles/function.scss';
 
 .header {
   position: relative;
-  top:0;
+  top: 0;
   height: pxRem(90);
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-bottom: 1px solid $border-color;
+}
+
+h1 {
+  cursor: pointer;
 }

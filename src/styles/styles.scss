@@ -1,10 +1,12 @@
+@import '@/styles/function.scss';
+
 // Цветовая палитра
-$primary: #7AD7F0; // Основной цвет
-$secondary: #34495E; // Второстепенный цвет
-$text-color: #34495E; // Основной цвет текста
-$background: #FFFFFF; // Основной цвет фона
-$border-color: #E0E0E0; // Основной цвет границ
-$accent-color: #F1C40F; // Акцентный цвет
+$primary: #7ad7f0; // Основной цвет
+$secondary: #34495e; // Второстепенный цвет
+$text-color: #34495e; // Основной цвет текста
+$background: #ffffff; // Основной цвет фона
+$border-color: #e0e0e0; // Основной цвет границ
+$accent-color: #f1c40f; // Акцентный цвет
 
 // Размеры и отступы
 $unit-quarter: 0.25rem; // 4px если базовый размер шрифта 16px
@@ -17,4 +19,3 @@ $double2: 2rem; // 32px
 $font-size-base: 1rem; // 16px
 $font-size-lg: 1.25rem; // 20px
 $font-size-sm: 0.875rem; // 14px
-
