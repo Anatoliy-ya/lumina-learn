@@ -1,0 +1,41 @@
+@import 'src/styles/styles.scss';
+@import '@/styles/function.scss';
+
+.wrapperContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  border: 1px solid $border-color;
+  border-radius: $unit;
+  padding: pxRem(10);
+  position: relative;
+  width: 100%;
+  height: pxRem(30);
+
+  &.show {
+    height: 100%;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.contentHidden {
+  display: none;
+}
+
+.dropdownIcon {
+  position: absolute;
+  right: pxRem(10);
+  width: pxRem(20);
+  height: pxRem(20);
+  margin-left: pxRem(10);
+}

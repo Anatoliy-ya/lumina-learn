@@ -1,10 +1,10 @@
 @import 'src/styles/styles.scss';
-@import "@/styles/function.scss";
+@import '@/styles/function.scss';
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: pxRem(20);
   text-align: center;
 }
 

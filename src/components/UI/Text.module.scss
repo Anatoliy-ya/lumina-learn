@@ -1,0 +1,39 @@
+@import 'src/styles/styles.scss';
+@import '@/styles/function.scss';
+
+.text {
+  color: $text-color;
+  font-size: $unit;
+
+  &.ssm {
+    font-size: $unit-quarter;
+  }
+
+  &.sm {
+    font-size: $unit-half;
+  }
+
+  &.md {
+    font-size: $unit;
+  }
+
+  &.lg {
+    font-size: $unit-and-half;
+  }
+
+  &.slg {
+    font-size: $double2;
+  }
+
+  &.primary {
+    color: $primary;
+  }
+
+  &.secondary {
+    color: $secondary;
+  }
+
+  &.accent {
+    color: $accent-color;
+  }
+}

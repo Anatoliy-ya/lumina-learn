@@ -1,9 +1,8 @@
 @import 'src/styles/styles.scss';
-@import "@/styles/function.scss";
+@import '@/styles/function.scss';
 
 .footer {
-  position: absolute;
-  bottom:0;
+  position: relative;
   height: pxRem(70);
   min-width: 100%;
   display: flex;

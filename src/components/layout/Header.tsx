@@ -1,7 +1,7 @@
 import Button from 'components/UI/Button';
 import styles from './Header.module.scss';
 
-const Header = (props: any) => {
+const Header: React.FC = (props) => {
   const refresh = () => {
     window.location.reload();
   };

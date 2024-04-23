@@ -2,11 +2,11 @@ import Footer from './Footer';
 import Header from './Header';
 import styles from './Layout.module.scss';
 
-interface Props {
+interface PropsLayout {
   children: React.ReactNode;
 }
 
-const Layout = (props: Props) => {
+const Layout: React.FC<PropsLayout> = (props) => {
   return (
     <div className={styles.layout_container}>
       <Header />

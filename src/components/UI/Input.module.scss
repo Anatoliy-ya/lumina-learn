@@ -39,6 +39,7 @@ input {
     padding: $unit-and-half;
   }
 }
+
 .wrapperInput {
   border: 2px solid $border-color;
   border-radius: $unit-quarter;
@@ -51,4 +52,9 @@ input {
   &:focus {
     outline: 0;
   }
+}
+
+.name {
+  margin-left: pxRem(5);
+  font-weight: 500;
 }
