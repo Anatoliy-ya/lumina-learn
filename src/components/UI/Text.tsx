@@ -3,7 +3,7 @@ import styles from './Text.module.scss';
 interface PropsText {
   children: React.ReactNode;
   style: 'p' | 'span' | 'label' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'li' | 'a';
-  size: 'sm' | 'md' | 'lg' | 'slg';
+  size: 'xs' | 'sm' | 'md' | 'lg' | 'slg';
   color: 'primary' | 'secondary' | 'accent' | 'text-color' | 'error-color' | 'success-color';
   className?: string;
   href?: string;

@@ -1,10 +1,9 @@
 import styles from './CourseContent.module.scss';
 import Text from './Text';
-import Button from './Button';
+import { SlArrowDown } from 'react-icons/sl';
+import { colors } from '../../styles/colors';
 
-// TODO: fix ReactComponent for icon in svg
-// import { ReactComponent as DropdownIcon } from '../../assets/svg/dropdown.svg';
-import dropdownIcon from '../../assets/svg/dropdown.svg';
+// import dropdownIcon from '../../assets/svg/dropdown.svg';
 
 interface PropsCourseContent {
   children?: React.ReactNode;
@@ -15,16 +14,31 @@ interface PropsCourseContent {
 }
 
 const CourseContent: React.FC<PropsCourseContent> = (props) => {
-  const classContent = props.showContent ? styles.content : styles.contentHidden;
+  const classContent = props.showContent ? styles.contentOverview : styles.contentHiddenOverview;
   const classWrapper = `${styles.wrapperContent} ${styles.show}`;
-  console.log('classContent', classContent);
+  const classDropdownIcon = props.showContent ? styles.dropdownIcon : styles.dropdownIconRotate;
+  console.log();
   return (
     <div className={classWrapper} id={props.id} onClick={props.onClick}>
-      ОГЛАВЛЕНИЕ КУРСА ({props.content.length}){' '}
-      <img src={dropdownIcon} alt="" className={styles.dropdownIcon} />
+      <Text size="md" color="secondary" style="h3" className={styles.overview}>
+        ОГЛАВЛЕНИЕ КУРСА ({props.content.length})
+      </Text>
+      <SlArrowDown
+        className={classDropdownIcon}
+        color={colors.primary}
+        size={24}
+        title="Dropdown Content Course"
+      />
+      {/* <img src={dropdownIcon} alt="" className={classDropdownIcon} /> */}
       <div className={classContent}>
         {props.content.map((item, index) => (
-          <Text size="md" color="text-color" style="p" id={`${props.id}-${index}`} key={index}>
+          <Text
+            size="md"
+            color="text-color"
+            style="p"
+            id={`${props.id}-${index}`}
+            key={index}
+            className={styles.contentCourseText}>
             {index + 1}. {item}
           </Text>
         ))}

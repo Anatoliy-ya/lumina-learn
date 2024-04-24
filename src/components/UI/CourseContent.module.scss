@@ -18,24 +18,45 @@
   }
 }
 
-.content {
+.contentOverview {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin: pxRem(6) pxRem(0);
 }
 
-.contentHidden {
+.contentHiddenOverview {
   display: none;
+}
+
+.overview {
+  margin: 0;
+}
+
+.contentCourseText {
+  margin: pxRem(5) pxRem(0);
 }
 
 .dropdownIcon {
   position: absolute;
   right: pxRem(10);
+  top: pxRem(10);
   width: pxRem(20);
   height: pxRem(20);
   margin-left: pxRem(10);
+  transition: transform 0.3s;
+  transform: rotate(180deg);
+}
+
+.dropdownIconRotate {
+  position: absolute;
+  right: pxRem(10);
+  top: pxRem(10);
+  width: pxRem(20);
+  height: pxRem(20);
+  margin-left: pxRem(10);
+  transition: transform 0.3s;
 }

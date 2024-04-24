@@ -6,7 +6,12 @@ import { useState } from 'react';
 
 const PanelCourse: React.FC = () => {
   const [showContent, setShowContent] = useState<boolean>(Boolean);
-  const content = ['Content 1', 'Content 2', 'Content 3', 'Content 4'];
+  const content = [
+    'Content 1Content 1Content 1Content 1Content 1Content 1',
+    'Content 2Content 2Content 2Content 2Content 2Content 2Content 2',
+    'Content 3',
+    'Content 4',
+  ];
 
   const handleShowContent = () => {
     console.log('handleShowContent', showContent);

@@ -5,20 +5,20 @@
   color: $text-color;
   font-size: $unit;
 
-  &.ssm {
-    font-size: $unit-quarter;
+  &.xs {
+    font-size: $font-size-xs;
   }
 
   &.sm {
-    font-size: $unit-half;
+    font-size: $font-size-sm;
   }
 
   &.md {
-    font-size: $unit;
+    font-size: $font-size-base;
   }
 
   &.lg {
-    font-size: $unit-and-half;
+    font-size: $font-size-lg;
   }
 
   &.slg {
