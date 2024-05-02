@@ -3,12 +3,21 @@ import styles from './Button.module.scss';
 interface PropsButton {
   children: React.ReactNode;
   variant: 'primary' | 'secondary' | 'accent';
-  size: 'sm' | 'md' | 'lg';
-
+  size: 'xs' | 'sm' | 'md' | 'lg';
+  error?: boolean;
+  success?: boolean;
   onClick?: () => void;
 }
 const Button = (props: PropsButton): JSX.Element => {
-  const buttonClass = `${styles.button} ${styles[props.variant]} ${styles[props.size]}`;
+  let buttonClass = `${styles.button} ${styles[props.variant]} ${styles[props.size]}`;
+
+  if (props.error) {
+    buttonClass += ` ${styles.error}`;
+  }
+
+  if (props.success) {
+    buttonClass += ` ${styles.success}`;
+  }
 
   return (
     <div>

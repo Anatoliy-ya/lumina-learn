@@ -9,3 +9,21 @@ export const colors = {
   successColor: '#2ecc71',
   backgroundGray: '#fcfbfb',
 };
+
+export const colorNavigation = [
+  '#7ad7f0',
+  '#7ac1f0',
+  '#7a86f0',
+  '#c57af0',
+  '#ee7af0',
+  '#f07acf',
+  '#f07aa1',
+  '#f07a7a',
+  '#f07aa1',
+  '#f07acf',
+  '#ee7af0',
+  '#c57af0',
+  '#7a86f0',
+  '#7ac1f0',
+  '#7ad7f0',
+];

@@ -5,10 +5,11 @@
   display: inline-block;
   border: 1px solid $border-color;
   border-radius: $unit-quarter;
-  padding: $unit-half;
+  padding: $unit-quarter;
   cursor: pointer;
   background-color: $background;
   font-size: $unit;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 
   &.primary {
     background-color: $primary;
@@ -23,8 +24,12 @@
     background-color: $accent-color;
   }
 
-  &.sm {
+  &.xs {
     padding: $unit-half;
+  }
+
+  &.sm {
+    padding: $unit-three-quarters;
   }
 
   &.md {
@@ -34,4 +39,16 @@
   &.lg {
     padding: $unit-and-half;
   }
+
+  &.error {
+    background-color: $error-color;
+  }
+
+  &.success {
+    background-color: $success-color;
+  }
+}
+
+.button:hover {
+  background-color: $for-hover;
 }

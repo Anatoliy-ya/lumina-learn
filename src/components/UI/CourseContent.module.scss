@@ -10,11 +10,10 @@
   border-radius: $unit;
   padding: pxRem(10);
   position: relative;
-  width: 100%;
-  height: pxRem(30);
+  height: pxRem(20);
 
   &.show {
-    height: 100%;
+    height: auto;
   }
 }
 

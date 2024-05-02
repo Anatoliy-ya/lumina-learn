@@ -1,0 +1,59 @@
+@import 'src/styles/styles.scss';
+@import '@/styles/function.scss';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+}
+
+.menuToggle {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 5;
+  padding: 5px;
+  // background: #131313;
+}
+
+.menuToggle:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+  overflow: auto;
+  border-top: 1px solid $border-color;
+  margin-top: pxRem(90);
+}
+
+.nav li {
+  border-radius: pxRem(10);
+  margin-bottom: 10px;
+  list-style: none;
+  cursor: pointer;
+  color: $text-color;
+  padding: pxRem(15);
+}

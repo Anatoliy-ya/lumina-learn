@@ -1,0 +1,91 @@
+@import 'src/styles/styles.scss';
+@import '@/styles/function.scss';
+
+.panelCourse {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  min-width: pxRem(1000);
+  border: 1px solid $border-color;
+  border-radius: $unit;
+  margin: pxRem(30) pxRem(15) pxRem(15) pxRem(15);
+  position: relative;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.courseImg {
+  padding: pxRem(30) pxRem(30) pxRem(80) pxRem(30);
+  margin: pxRem(30);
+  min-width: pxRem(500);
+  max-width: min-content;
+  height: pxRem(500);
+  border: 1px solid $border-color;
+  border-radius: $unit;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $unit-quarter;
+  }
+}
+
+.courseBody {
+  margin: pxRem(30) pxRem(30) pxRem(30) pxRem(0);
+  display: flex;
+  flex-direction: column;
+  padding: pxRem(10);
+  width: 100%;
+  min-height: pxRem(500);
+  border: 1px solid $border-color;
+  border-radius: $unit;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.coursePrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  border: 2px solid $border-color;
+  background-color: $accent-color;
+  border-radius: pxRem(10);
+  padding: pxRem(10) pxRem(5);
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: pxRem(-27);
+  left: pxRem(50);
+}
+
+.tab_btn {
+  border: 1px solid $border-color;
+  border-bottom: 0px;
+  border-radius: $unit-half $unit-half 0px 0px;
+  padding: pxRem(5) pxRem(15);
+  margin-left: pxRem(10);
+  background-color: $background;
+  cursor: pointer;
+}
+
+.tab_btn.active {
+  border: 1px solid $border-color;
+  background-color: $primary;
+}
+
+.tab_content {
+  display: none;
+}
+
+.tab_content.active {
+  display: block;
+}

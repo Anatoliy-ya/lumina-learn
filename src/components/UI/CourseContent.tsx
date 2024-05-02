@@ -15,7 +15,9 @@ interface PropsCourseContent {
 
 const CourseContent: React.FC<PropsCourseContent> = (props) => {
   const classContent = props.showContent ? styles.contentOverview : styles.contentHiddenOverview;
-  const classWrapper = `${styles.wrapperContent} ${styles.show}`;
+  const classWrapper = props.showContent
+    ? `${styles.wrapperContent} ${styles.show}`
+    : styles.wrapperContent;
   const classDropdownIcon = props.showContent ? styles.dropdownIcon : styles.dropdownIconRotate;
   console.log();
   return (

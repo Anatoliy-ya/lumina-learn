@@ -10,8 +10,22 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid $border-color;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
+.logo {
   cursor: pointer;
+  height: pxRem(75);
+  margin: 0 pxRem(20);
+  object-fit: contain;
+  object-position: center;
+  border-radius: pxRem(10);
+  position: relative;
+  left: pxRem(100);
+  box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+.logo:hover {
+  transform: scaleX(1.1) scaleY(1.1);
+  transition: 0.2s;
 }

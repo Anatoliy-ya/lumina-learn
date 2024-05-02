@@ -1,10 +1,10 @@
 import Card from 'components/UI/CardCourse';
-import styles from './ManePage.module.scss';
-import PanelCourse from './PanelCourse';
+import styles from './MainPage.module.scss';
+import PanelCourse from './panelCourse/PanelCourse';
 
-const ManePage: React.FC = () => {
+const MainPage: React.FC = () => {
   return (
-    <div className={styles.manePage}>
+    <main className={styles.mainPage}>
       <div className={styles.containerCourse}>
         <PanelCourse />
         {/* <Card
@@ -15,8 +15,8 @@ const ManePage: React.FC = () => {
           onClick={() => console.log('React 2024. Learn React')}
         /> */}
       </div>
-    </div>
+    </main>
   );
 };
 
-export default ManePage;
+export default MainPage;

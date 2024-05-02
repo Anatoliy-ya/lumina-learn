@@ -1,10 +1,10 @@
 import styles from './PanelCourse.module.scss';
-import Text from '../components/UI/Text';
+import Text from '../../components/UI/Text';
 import Button from 'components/UI/Button';
 import CourseContent from 'components/UI/CourseContent';
 import { useState } from 'react';
 
-const PanelCourse: React.FC = () => {
+const PreviewTab: React.FC = () => {
   const [showContent, setShowContent] = useState<boolean>(Boolean);
   const content = [
     'Content 1Content 1Content 1Content 1Content 1Content 1',
@@ -13,22 +13,17 @@ const PanelCourse: React.FC = () => {
     'Content 4',
   ];
 
-  const handleShowContent = () => {
-    console.log('handleShowContent', showContent);
-    setShowContent(!showContent);
-  };
-
   return (
-    <div className={styles.panelCourse}>
+    <>
       <div className={styles.courseImg}>
         <img src="https://reactjs.org/logo-og.png" alt="React 2024. Learn React" />
         <div className={styles.coursePrice}>
-          <Text size="lg" color="text-color" style="h2">
+          <Text size="lg" color="text-color" style="h2" className={styles.price}>
             Цена: 1000$
           </Text>
           <Button
             variant="primary"
-            size="md"
+            size="sm"
             onClick={() => console.log('Buy course: React 2024. Learn React')}>
             Купить
           </Button>
@@ -51,8 +46,8 @@ const PanelCourse: React.FC = () => {
           onClick={() => setShowContent(!showContent)}
         />
       </div>
-    </div>
+    </>
   );
 };
 
-export default PanelCourse;
+export default PreviewTab;
