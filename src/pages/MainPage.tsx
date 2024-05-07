@@ -1,19 +1,23 @@
-import Card from 'components/UI/CardCourse';
 import styles from './MainPage.module.scss';
-import PanelCourse from './panelCourse/PanelCourse';
 
-const MainPage: React.FC = () => {
+import CardCourse from 'components/UI/CardCourse';
+import { courses } from './../store/Courses';
+
+interface PropsMainPage {}
+const MainPage: React.FC<PropsMainPage> = (props) => {
   return (
     <main className={styles.mainPage}>
       <div className={styles.containerCourse}>
-        <PanelCourse />
-        {/* <Card
-          title="React 2024. Learn React"
-          nameCourse="React 2024. Learn React"
-          nameTeacher="Sergey"
-          imgUrl="https://reactjs.org/logo-og.png"
-          onClick={() => console.log('React 2024. Learn React')}
-        /> */}
+        {courses.map((course) => (
+          <CardCourse
+            key={course.id}
+            nameCourse={course.nameCourse}
+            nameTeacher={course.nameTeacher}
+            imgUrl={course.imgUrl}
+            title={course.title}
+            id={course.id}
+          />
+        ))}
       </div>
     </main>
   );

@@ -4,7 +4,7 @@
 .header {
   position: relative;
   top: 0;
-  height: pxRem(90);
+  height: pxRem(75);
   width: 100%;
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@
 
 .logo {
   cursor: pointer;
-  height: pxRem(75);
+  height: pxRem(60);
   margin: 0 pxRem(20);
   object-fit: contain;
   object-position: center;

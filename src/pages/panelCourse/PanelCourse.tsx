@@ -2,14 +2,22 @@ import styles from './PanelCourse.module.scss';
 
 import { useState } from 'react';
 import PreviewTab from './PreviewTab';
+import { useParams } from 'react-router-dom';
 
-const PanelCourse: React.FC = () => {
+interface PropsPanelCourse {
+  id?: number | null;
+}
+const PanelCourse: React.FC<PropsPanelCourse> = (props) => {
+  const { id } = useParams<{ id: string }>();
+  const selectedId = id ? parseInt(id) : null;
+
   const [activeTab, setActiveTab] = useState<string>('preview');
   const classPreviewTab =
     activeTab === 'preview' ? `${styles.tab_btn} ${styles.active}` : `${styles.tab_btn}`;
   const classCourseTab =
     activeTab === 'course' ? `${styles.tab_btn} ${styles.active}` : `${styles.tab_btn}`;
 
+  console.log('props', props);
   const handleTabClick = (tab: string) => {
     console.log('tab', tab);
     setActiveTab(tab);
@@ -25,7 +33,7 @@ const PanelCourse: React.FC = () => {
           Course
         </button>
       </div>
-      {activeTab === 'preview' && <PreviewTab />}
+      {(activeTab === 'preview' || selectedId !== null) && <PreviewTab id={selectedId} />}
       {activeTab === 'course' && <div>Course</div>} {/* TODO Add tab Course */}
     </div>
   );

@@ -17,3 +17,15 @@ export interface CourseState {
   isFree: boolean;
   isFavorite: boolean;
 }
+
+export interface CourseStateMini {
+  id: number;
+  name: string;
+  nameTeacher: string;
+  nameCourse: string;
+  imgUrl: string;
+  title: string;
+  chapters: {
+    [key: number]: string;
+  };
+}

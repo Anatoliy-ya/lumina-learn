@@ -1,13 +1,19 @@
-import MainPage from './pages/MainPage';
 import styles from './App.module.scss';
+
+import { Routes, Route } from 'react-router-dom';
+
+import MainPage from './pages/MainPage';
 import Layout from './components/layout/Layout';
-import Card from 'components/UI/CardCourse';
+import PanelCourse from './pages/panelCourse/PanelCourse';
 
 function App() {
   return (
     <div className={styles.app}>
       <Layout>
-        <MainPage />
+        <Routes>
+          <Route path="*" element={<MainPage />} />
+          <Route path="/panelcourse/:id" element={<PanelCourse />} />
+        </Routes>
       </Layout>
     </div>
   );
