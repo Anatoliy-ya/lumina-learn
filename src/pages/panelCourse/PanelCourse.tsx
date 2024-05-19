@@ -3,6 +3,7 @@ import styles from './PanelCourse.module.scss';
 import { useState } from 'react';
 import PreviewTab from './PreviewTab';
 import { useParams } from 'react-router-dom';
+import Button from 'components/UI/Button';
 
 interface PropsPanelCourse {
   id?: number | null;
@@ -17,7 +18,7 @@ const PanelCourse: React.FC<PropsPanelCourse> = (props) => {
   const classCourseTab =
     activeTab === 'course' ? `${styles.tab_btn} ${styles.active}` : `${styles.tab_btn}`;
 
-  console.log('props', props);
+  console.log('selectedId', selectedId);
   const handleTabClick = (tab: string) => {
     console.log('tab', tab);
     setActiveTab(tab);
@@ -26,14 +27,22 @@ const PanelCourse: React.FC<PropsPanelCourse> = (props) => {
   return (
     <div className={styles.panelCourse}>
       <div className={styles.tabs}>
-        <button className={classPreviewTab} onClick={() => handleTabClick('preview')}>
+        <Button
+          variant="primary"
+          size="xs"
+          className={classPreviewTab}
+          onClick={() => handleTabClick('preview')}>
           Preview
-        </button>
-        <button className={classCourseTab} onClick={() => handleTabClick('course')}>
+        </Button>
+        <Button
+          variant="primary"
+          size="xs"
+          className={classCourseTab}
+          onClick={() => handleTabClick('course')}>
           Course
-        </button>
+        </Button>
       </div>
-      {(activeTab === 'preview' || selectedId !== null) && <PreviewTab id={selectedId} />}
+      {activeTab === 'preview' && <PreviewTab id={selectedId} />}
       {activeTab === 'course' && <div>Course</div>} {/* TODO Add tab Course */}
     </div>
   );

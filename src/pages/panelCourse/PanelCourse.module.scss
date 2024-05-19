@@ -63,7 +63,7 @@
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: pxRem(-27);
+  top: pxRem(-36);
   left: pxRem(50);
 }
 
@@ -71,7 +71,7 @@
   border: 1px solid $border-color;
   border-bottom: 0px;
   border-radius: $unit-half $unit-half 0px 0px;
-  padding: pxRem(5) pxRem(15);
+  padding: pxRem(10) pxRem(15);
   margin-left: pxRem(10);
   background-color: $background;
   cursor: pointer;
@@ -79,7 +79,9 @@
 
 .tab_btn.active {
   border: 1px solid $border-color;
-  background-color: $primary;
+  scale: 1.1;
+  font-weight: 500;
+  background-color: $chosen;
 }
 
 .tab_content {

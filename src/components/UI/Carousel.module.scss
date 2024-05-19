@@ -1,0 +1,36 @@
+@import 'src/styles/styles.scss';
+@import '@/styles/function.scss';
+
+.CarouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: pxRem(300);
+  margin: pxRem(50) pxRem(50);
+  border: 1px solid $border-color;
+  border-radius: $unit;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
+  padding: pxRem(10) pxRem(20);
+  overflow: hidden;
+
+  &.sm {
+    height: pxRem(300);
+    max-width: 80%;
+  }
+
+  &.md {
+    height: pxRem(350);
+    max-width: 75%;
+  }
+
+  &.lg {
+    height: pxRem(450);
+    max-width: 71%;
+  }
+}
+
+.innerCarousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

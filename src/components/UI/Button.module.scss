@@ -2,7 +2,6 @@
 @import '@/styles/function.scss';
 
 .button {
-  display: inline-block;
   border: 1px solid $border-color;
   border-radius: $unit-quarter;
   padding: $unit-quarter;
@@ -50,5 +49,5 @@
 }
 
 .button:hover {
-  background-color: $for-hover;
+  background-color: $chosen;
 }

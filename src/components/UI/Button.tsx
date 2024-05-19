@@ -7,6 +7,7 @@ interface PropsButton {
   error?: boolean;
   success?: boolean;
   onClick?: () => void;
+  className?: string;
 }
 const Button = (props: PropsButton): JSX.Element => {
   let buttonClass = `${styles.button} ${styles[props.variant]} ${styles[props.size]}`;
@@ -19,9 +20,15 @@ const Button = (props: PropsButton): JSX.Element => {
     buttonClass += ` ${styles.success}`;
   }
 
+  if (props.className) {
+    buttonClass += ` ${props.className}`;
+  }
+
   return (
     <div>
-      <button className={buttonClass}>{props.children}</button>
+      <button className={buttonClass} onClick={props.onClick}>
+        {props.children}
+      </button>
     </div>
   );
 };
