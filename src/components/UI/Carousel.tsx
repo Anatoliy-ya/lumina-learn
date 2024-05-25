@@ -33,27 +33,3 @@ const Carousel: React.FC<PropsCarousel> = (props) => {
 };
 
 export default Carousel;
-
-// const settings = {
-//   dots: true,
-//   infinite: true,
-//   slidesToShow: 4,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   autoplaySpeed: 4000,
-//   pauseOnHover: true,
-// };
-
-// const Carousel: React.FC<PropsCarousel> = (props) => {
-//   const classSlider = `${styles.sliderWrapper} ${styles[props.size]}`;
-//   return (
-//     <div className={classSlider}>
-//       <Slider {...settings}>
-//         {props.children}
-//         {/* Добавьте больше слайдов по мере необходимости */}
-//       </Slider>
-//     </div>
-//   );
-// };
-
-// export default Carousel;

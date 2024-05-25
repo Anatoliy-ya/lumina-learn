@@ -1,11 +1,11 @@
 import styles from './PanelCourse.module.scss';
-import { SetStateAction, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Text from '../../components/UI/Text';
 import Button from 'components/UI/Button';
 import CourseChapters from 'components/UI/CourseChapters';
 import { courses } from './../../store/Courses';
-import { CourseStateMini } from 'types/types';
+import { CourseInterfaceMini } from 'types/types';
 
 interface PropsPreviewTab {
   id: number | null;
@@ -14,7 +14,7 @@ interface PropsPreviewTab {
 const PreviewTab: React.FC<PropsPreviewTab> = (props) => {
   const [showContent, setShowContent] = useState<boolean>(Boolean);
   const [chapters, setChapters] = useState<{ id: number; chapters: string[] }[]>([]);
-  const [selectedCourse, setSelectedCourse] = useState<CourseStateMini[]>([]);
+  const [selectedCourse, setSelectedCourse] = useState<CourseInterfaceMini[]>([]);
 
   useEffect(() => {
     const arrChapters = courses
@@ -24,14 +24,13 @@ const PreviewTab: React.FC<PropsPreviewTab> = (props) => {
         chapters: Object.values(course.chapters),
       }));
 
-    const filteredCourses: CourseStateMini[] = [];
+    const filteredCourses: CourseInterfaceMini[] = [];
     courses.map((course) => {
       if (course.id === props.id) {
-        const filteredCourse: CourseStateMini = {
+        const filteredCourse: CourseInterfaceMini = {
           id: course.id,
-          name: course.nameCourse,
           nameTeacher: course.nameTeacher,
-          nameCourse: course.nameCourse,
+          courseName: course.courseName,
           imgUrl: course.imgUrl,
           title: course.title,
           chapters: course.chapters,
@@ -70,13 +69,13 @@ const PreviewTab: React.FC<PropsPreviewTab> = (props) => {
       </div>
       <div className={styles.courseBody}>
         <Text size="lg" color="text-color" style="h2">
-          {selectedCourse[0]?.nameCourse}
+          {selectedCourse[0]?.courseName}
         </Text>
         <Text size="md" color="text-color" style="h3">
           Автор: {selectedCourse[0]?.nameTeacher}
         </Text>
         <Text size="md" color="text-color" style="p">
-          {selectedCourse[0]?.nameCourse}
+          {selectedCourse[0]?.courseName}
         </Text>
         <CourseChapters
           chapters={chapters}

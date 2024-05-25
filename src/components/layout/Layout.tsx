@@ -9,7 +9,7 @@ interface PropsLayout {
 
 const Layout: React.FC<PropsLayout> = (props) => {
   return (
-    <div className={styles.layout_container}>
+    <div className={styles.layoutContainer}>
       <Header />
       <Sidebar />
       <div className={styles.contentLayout}>{props.children}</div>

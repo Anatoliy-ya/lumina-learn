@@ -1,12 +1,12 @@
-export interface UserState {
+export interface UserInterface {
   name: string;
   isAuthenticated: boolean;
 }
 
-export interface CourseState {
+export interface CourseInterface {
   id: number;
-  name: string;
   nameTeacher: string;
+  courseName: string;
   category: string;
   imgUrl: string;
   title: string;
@@ -16,16 +16,26 @@ export interface CourseState {
   price: number;
   isFree: boolean;
   isFavorite: boolean;
+  chapters: {
+    [key: number]: string;
+  };
 }
 
-export interface CourseStateMini {
+export interface CourseInterfaceMini {
   id: number;
-  name: string;
   nameTeacher: string;
-  nameCourse: string;
+  courseName: string;
   imgUrl: string;
   title: string;
   chapters: {
     [key: number]: string;
   };
+}
+
+export interface FeedbackInterface {
+  id: number;
+  userName: string;
+  courseName: string;
+  idCourse: number;
+  text: string;
 }

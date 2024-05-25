@@ -3,7 +3,10 @@
 
 .swiperWrapper {
   margin: pxRem(100) 0;
-  width: pxRem(1320);
+  width: 100%;
+  max-width: pxRem(1980);
+  height: pxRem(500);
+  overflow: hidden;
 }
 
 .heading {
@@ -17,15 +20,15 @@
 }
 
 .swiperContainer {
-  width: pxRem(1320);
+  width: 100%;
   height: pxRem(420);
-  padding: 2rem;
   position: relative;
 }
 
 .sliderController {
   position: relative;
   bottom: 2rem;
+  margin: 0 pxRem(30);
 }
 
 .slide {
@@ -54,4 +57,18 @@
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
   z-index: 10;
+}
+
+//============================================================================
+
+.swiperCubeWrapper {
+  max-width: pxRem(400);
+  max-height: pxRem(400);
+  position: relative;
+  margin: pxRem(25) pxRem(50);
+}
+
+.swiperContainerCube {
+  width: 100%;
+  height: pxRem(450);
 }

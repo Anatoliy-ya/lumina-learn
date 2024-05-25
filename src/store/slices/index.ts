@@ -1,10 +1,10 @@
 import { userInitialState } from 'types/initialStates';
-import { CourseState, UserState } from 'types/types';
+import { CourseInterface, UserInterface } from 'types/types';
 import { PayloadAction, combineReducers, createSlice } from '@reduxjs/toolkit';
 
 const userSlice = createSlice({
   name: 'user',
-  initialState: userInitialState as UserState,
+  initialState: userInitialState as UserInterface,
   reducers: {
     login: (state, action: PayloadAction<string>) => {
       state.name = action.payload;
@@ -19,15 +19,15 @@ const userSlice = createSlice({
 
 const coursesSlice = createSlice({
   name: 'courses',
-  initialState: [] as CourseState[],
+  initialState: [] as CourseInterface[],
   reducers: {
-    addCourse: (state, action: PayloadAction<CourseState>) => {
+    addCourse: (state, action: PayloadAction<CourseInterface>) => {
       state.push(action.payload);
     },
     removeCourse: (state, action: PayloadAction<number>) => {
       return state.filter((course) => course.id !== action.payload);
     },
-    updateCourse: (state, action: PayloadAction<CourseState>) => {
+    updateCourse: (state, action: PayloadAction<CourseInterface>) => {
       const index = state.findIndex((course) => course.id === action.payload.id);
       if (index !== -1) {
         state[index] = action.payload;
