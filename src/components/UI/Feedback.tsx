@@ -23,10 +23,13 @@ const Feedback: React.FC<PropsFeedback> = (props) => {
         <img className={styles.userImg} src="src\assets\avatar\Platzhalter.png" />
         <div className={styles.userName}>{props.userName}</div>
       </div>
-      <div className={styles.courseName} onClick={handleClickCard}>
-        {props.courseName}
+      <div className={classFeedbackText}>
+        Course:
+        <div className={styles.courseName} onClick={handleClickCard}>
+          {props.courseName}
+        </div>
+        {props.userName}: {props.text}
       </div>
-      <div className={classFeedbackText}>{props.text}</div>
     </div>
   );
 };

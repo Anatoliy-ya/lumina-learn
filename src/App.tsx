@@ -2,7 +2,7 @@ import styles from './App.module.scss';
 
 import { Routes, Route } from 'react-router-dom';
 
-import MainPage from './pages/MainPage';
+import MainPage from './pages/mainpage/MainPage';
 import Layout from './components/layout/Layout';
 import PanelCourse from './pages/panelCourse/PanelCourse';
 

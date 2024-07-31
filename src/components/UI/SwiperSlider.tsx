@@ -47,7 +47,6 @@ const SwiperSlider: React.FC<PropsSwiperSlider> = (props) => {
     <>
       {props.variant === 'coverflow' && (
         <div className={styles.swiperWrapper} ref={swiperRef}>
-          <h1 className={styles.heading}>Sale Course</h1>
           <Swiper
             effect={'coverflow'}
             autoplay={true}
@@ -101,10 +100,10 @@ const SwiperSlider: React.FC<PropsSwiperSlider> = (props) => {
       {props.variant === 'cube' && (
         <div className={styles.swiperCubeWrapper}>
           <Swiper
-            // autoplay={{
-            //   delay: 5000,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
             effect={'cube'}
             grabCursor={true}
             cubeEffect={{

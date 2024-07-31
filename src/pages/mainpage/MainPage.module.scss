@@ -1,0 +1,108 @@
+@import 'src/styles/styles.scss';
+@import '@/styles/function.scss';
+
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.section {
+  margin: 0 pxRem(50);
+  border-bottom: 1px solid $primary;
+  position: relative;
+}
+
+.containerSlider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+.containerAbout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: pxRem(1980);
+  padding: pxRem(40);
+  position: relative;
+  height: 100%;
+}
+
+.heading {
+  position: absolute;
+  top: pxRem(20);
+  text-align: center;
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $border-color;
+  border-radius: $unit;
+  padding: pxRem(30);
+  background: rgb(0, 0, 0, 0.7);
+  background-image: url('/src/assets/logo/logo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  gap: pxRem(30);
+  margin: pxRem(30);
+}
+
+.aboutUsText {
+  mix-blend-mode: difference;
+}
+
+.containerBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: pxRem(850);
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bannerText {
+  position: absolute;
+  top: 10%;
+  font-family: 'Arial', sans-serif;
+  font-size: pxRem(100);
+  color: #ffffff;
+  animation: burn 2s infinite;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.burning-text {
+}
+
+@keyframes burn {
+  0% {
+    text-shadow: 0 0 5px #ffa, 0 0 10px #ff0, 0 0 15px #f00, 0 0 20px #f00, 0 0 30px #f00,
+      0 0 40px #f00, 0 0 55px #f00, 0 0 75px #f00;
+  }
+  50% {
+    text-shadow: 0 0 10px #ff0, 0 0 20px #ff8000, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00,
+      0 0 60px #ff4500, 0 0 75px #f00, 0 0 100px #f00;
+  }
+  100% {
+    text-shadow: 0 0 5px #ffa, 0 0 10px #ff0, 0 0 15px #f00, 0 0 20px #f00, 0 0 30px #f00,
+      0 0 40px #f00, 0 0 55px #f00, 0 0 75px #f00;
+  }
+}

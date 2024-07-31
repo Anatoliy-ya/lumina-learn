@@ -28,7 +28,7 @@
 .user {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: pxRem(10);
   padding: pxRem(10);
 }
@@ -39,7 +39,6 @@
 }
 
 .feedbackText {
-  padding: pxRem(10) pxRem(0);
   border-top: 1px dashed $border-color;
   width: 100%;
 
@@ -49,10 +48,9 @@
 }
 
 .courseName {
-  position: absolute;
-  top: pxRem(35);
+  top: pxRem(30);
   right: pxRem(20);
-  padding: pxRem(5);
+  padding: 0 0 pxRem(10) 0;
 }
 
 .courseName:hover {
