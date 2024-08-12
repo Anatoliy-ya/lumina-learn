@@ -1,8 +1,6 @@
 import styles from './CardCourse.module.scss';
 
 import Text from './Text';
-import { RefAttributes, useRef } from 'react';
-
 import { useNavigate } from 'react-router-dom';
 
 interface PropsCardCourse {
