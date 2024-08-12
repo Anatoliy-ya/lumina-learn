@@ -10,7 +10,7 @@ import Text from 'components/UI/Text';
 import AboutUs from './AboutUs';
 
 interface PropsMainPage {}
-const MainPage: React.FC<PropsMainPage> = (props) => {
+const MainPage: React.FC<PropsMainPage> = () => {
   console.log('1111', courses);
   return (
     <main className={styles.mainPage}>

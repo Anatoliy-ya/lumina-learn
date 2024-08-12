@@ -14,7 +14,6 @@ const Carousel: React.FC<PropsCarousel> = (props) => {
   const carousel = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log('carousel', carousel.current.offsetWidth, carousel.current.scrollWidth);
     if (carousel.current && carousel.current.scrollWidth) {
       setWidthCarousel(carousel.current.scrollWidth - carousel.current.offsetWidth);
     }

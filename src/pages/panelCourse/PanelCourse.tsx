@@ -8,7 +8,7 @@ import Button from 'components/UI/Button';
 interface PropsPanelCourse {
   id?: number | null;
 }
-const PanelCourse: React.FC<PropsPanelCourse> = (props) => {
+const PanelCourse: React.FC<PropsPanelCourse> = () => {
   const { id } = useParams<{ id: string }>();
   const selectedId = id ? parseInt(id) : null;
 

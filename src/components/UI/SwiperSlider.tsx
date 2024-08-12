@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 
 import styles from './SwiperSlider.module.scss';
 
@@ -30,17 +30,9 @@ interface PropsSwiperSlider {
   variant: 'cube' | 'coverflow';
 }
 const SwiperSlider: React.FC<PropsSwiperSlider> = (props) => {
-  const [widthSlide, setWidthSlide] = useState<number>(0);
   const cardRef = useRef<HTMLDivElement | null>(null);
   const swiperRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    if (cardRef.current) {
-      setWidthSlide(cardRef.current.offsetWidth);
-    }
-  }, [cardRef]);
-
-  // const classSlider = widthSlide === 320 ? `${styles.slide} ${styles.md}` : styles.slide;
   const classSlider = `${styles.slide} ${styles[props.size]}`;
 
   return (
